@@ -1,0 +1,27 @@
+package "checkFile"
+version "1.0"
+purpose "check if the file type matches the extension"
+description "Authors:
+Flávio Costa 2201707,Simão Troeira 2201701
+
+Supported file types:
+PDF, GIF, JPG, PNG, MP4, ZIP,HTML"
+versiontext "1.0"
+
+section "Options"
+defgroup "Options" groupdesc="An option of this group is required:\n"  required
+groupoption "file" f " Parses the file 'fich', indicating if the file name extension matches or not to its content. The application must still validate that file matches the name of an existing file. checkFile must support multiple occurrences of the -f/--file option on the same line of command\n" group="Options" string multiple
+groupoption "batch" b "The file fich_with_filenames contains, on each line, the path/name of a file whose type is to be validated with the extension of its name. So, if fich_with_filenames has 20 lines, checkFile will have toprocess each of the 20 files.\n" group="Options" string
+groupoption "dir" d "Analyze each of the files in the 'directory' directory, checkingthe validity of the respective extension. Only files thatexist in the directory, ignoring any subdirectories.\n" group="Options" string 
+
+#----------------------------
+# independent options
+#----------------------------
+# Mandatory option
+
+# Optional
+
+#
+# NOTE: support for this file needs to be enabled in 'makefile'
+#
+
